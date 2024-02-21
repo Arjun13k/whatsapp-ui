@@ -25,14 +25,14 @@ class _MyScreenState extends State<MyScreen> {
           ),
           actions: [
             Icon(
-              Icons.search,
+              Icons.camera_alt_outlined,
               color: Colors.white,
             ),
             SizedBox(
               width: 20,
             ),
             Icon(
-              Icons.message_outlined,
+              Icons.search,
               color: Colors.white,
             ),
             SizedBox(
@@ -50,17 +50,15 @@ class _MyScreenState extends State<MyScreen> {
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorColor: Colors.white,
               tabs: [
-                Text(
-                  'Chat',
-                  style: TextStyle(color: Colors.white),
-                ),
+                Text('Chat',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
                 Text(
                   'Status',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 Text(
                   'Call',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ]),
         ),

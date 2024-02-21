@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyStatusPage extends StatelessWidget {
-  const MyStatusPage({super.key});
+class MyCallCard extends StatelessWidget {
+  const MyCallCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +15,6 @@ class MyStatusPage extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(
-                    "Status",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                  ),
-                  Spacer(),
-                  Icon(Icons.more_vert)
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
                   CircleAvatar(
                     radius: 30,
                   ),
@@ -39,11 +26,11 @@ class MyStatusPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'My Status',
+                        'Create call link',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                            fontWeight: FontWeight.bold, fontSize: 18),
                       ),
-                      Text("Tap to add status update")
+                      Text("Share a link for whatsapp call")
                     ],
                   ),
                 ],
@@ -51,7 +38,7 @@ class MyStatusPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text('Recent updates'),
+              Text('Recent'),
               ListView.separated(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -60,7 +47,13 @@ class MyStatusPage extends StatelessWidget {
                           radius: 30,
                         ),
                         title: Text('user name'),
-                        subtitle: Text('1:50'),
+                        subtitle: Row(
+                          children: [
+                            Icon(Icons.arrow_outward_outlined),
+                            Text('Today,1:50')
+                          ],
+                        ),
+                        trailing: Icon(Icons.call),
                       ),
                   separatorBuilder: (context, index) => SizedBox(
                         height: 15,

@@ -1,3 +1,4 @@
+import 'package:feb_20/view/home_screen/widget/call_card.dart';
 import 'package:flutter/material.dart';
 
 class MyCall extends StatelessWidget {
@@ -5,14 +6,6 @@ class MyCall extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-          'Call',
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
-      color: Colors.pink,
-    );
+    return MyCallCard();
   }
 }
