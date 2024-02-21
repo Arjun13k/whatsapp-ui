@@ -15,13 +15,27 @@ class MyChatPage extends StatelessWidget {
               width: 15,
             ),
             Column(
-              children: [Text("user name"), Text("Mesage")],
+              children: [
+                Text(
+                  "User name",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text("Mesage")
+              ],
             ),
             Spacer(),
             Column(
               children: [
-                Text("time"),
+                Text("9:10"),
+                SizedBox(
+                  height: 5,
+                ),
                 CircleAvatar(
+                  child: Text(
+                    '1',
+                    style: TextStyle(color: Colors.white, fontSize: 10),
+                  ),
+                  backgroundColor: Colors.green,
                   radius: 10,
                 )
               ],
